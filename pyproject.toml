@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "axolotl"
+version = "0.1.0"
+description = ""
+authors = ["nikita venediktov <n.venediktov@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+peft = "^0.11.1"
+transformers = "^4.42.4"
+packaging = "^24.1"
+optimum = "1.16.2"
+numpy = "1.24.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
