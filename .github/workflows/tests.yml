@@ -59,7 +59,8 @@ jobs:
 
       - name: cleanup pip cache
         run: |
-          find "$(pip cache dir)/http" -type f -mtime +14 -exec rm {} \;
+          ls -ltr "$(pip cache dir)"
+          find "$(pip cache dir)" -type f -mtime +14 -exec rm {} \;
 
   docker-e2e-tests:
     if: github.repository_owner == 'axolotl-ai-cloud'
