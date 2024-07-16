@@ -36,6 +36,7 @@ class TestFAXentropyLlama(unittest.TestCase):
     Test case for Llama models using LoRA w multipack
     """
 
+    @pytest.mark.skipif("temp remove to see if causes issues with downstream tests")
     @with_temp_dir
     def test_lora_packing_fa_cross_entropy(self, temp_dir):
         # pylint: disable=duplicate-code
