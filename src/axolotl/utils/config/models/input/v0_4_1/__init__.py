@@ -497,7 +497,7 @@ class AxolotlInputConfig(
     ] = Field(
         default=None, metadata={"help": {"streaming dataset to use for pretraining"}}
     )
-    dataset_processes: Optional[int] = Field(default=os.cpu_count())
+    dataset_processes: Optional[int] = Field(default=min(1, (os.cpu_count() or 2) // 2))
     dataset_keep_in_memory: Optional[bool] = None
     dataloader_pin_memory: Optional[bool] = None
     dataloader_num_workers: Optional[int] = None
