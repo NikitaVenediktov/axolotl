@@ -57,6 +57,10 @@ jobs:
         run: |
           pytest --ignore=tests/e2e/ tests/
 
+      - name: cleanup pip cache
+        run: |
+          rm -rf ~/.cache/pip/http
+
   docker-e2e-tests:
     if: github.repository_owner == 'axolotl-ai-cloud'
     # this job needs to be run on self-hosted GPU runners...
